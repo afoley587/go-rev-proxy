@@ -1,0 +1,28 @@
+---
+version: '3.7'
+services:
+  proxy:
+    image: my-rev-proxy
+    build:
+      context: ../
+    ports:
+      - 2002:2002
+  realserv1:
+    image: my-real-server
+    build:
+      context: ./nginx/
+    environment:
+      OUTSIDE: car.localhost:2002
+      PROXY_HOST: proxy:2002
+    depends_on:
+      - proxy
+  realserv2:
+    image: my-real-server
+    build:
+      context: ./nginx/
+    environment:
+      OUTSIDE: truck.localhost:2002
+      PROXY_HOST: proxy:2002
+    depends_on:
+      - proxy
+  
