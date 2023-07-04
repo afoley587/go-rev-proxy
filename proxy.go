@@ -60,8 +60,8 @@ func main() {
 			err := SaveRegistrationRequest(c)
 
 			if err != nil {
-				fmt.Println(err)
-				c.String(400, "Bad Body")
+				log.Println(err)
+				c.String(400, "Couldnt Register Host")
 				return
 			}
 
