@@ -28,7 +28,7 @@ func GetScheme(c *gin.Context) string {
 }
 
 // IsRegistrationRequest checks if an incoming request is meant to register
-// a new inside/outside hostname pair by checking if the hostname and 
+// a new inside/outside hostname pair by checking if the hostname and
 // path match a specific combination.
 // If the host is our registration.localhost or proxy hostname
 // AND if the path is /register, we will register a new endpoint
@@ -55,7 +55,7 @@ func SaveRegistrationRequest(c *gin.Context) error {
 	return nil
 }
 
-// Proxy runs the actual proxy and will look at the 
+// Proxy runs the actual proxy and will look at the
 // hostnames requested from the received request. It will
 // then translate that to the inside hostname and forward the
 // request
