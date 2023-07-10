@@ -184,7 +184,7 @@ Once the stack is up, open a browser and go to
 the hostnames are changing to the hostnames of your
 docker containers! 
 
-![demo](./img/demo.gif)
+![demo](./img/demo.cast)
 
 # GitHub
 As previously mentioned, feel free to navigate [here](https://github.com/afoley587/go-rev-proxy)
